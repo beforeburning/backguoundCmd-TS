@@ -15,6 +15,7 @@ yarn
 ```
 
 #### 打包方式
+* 打包后 存放在dist目录下
 ```
 npm run build
 ```
