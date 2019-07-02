@@ -27,7 +27,7 @@ npm run build
 
 #### 执行方式
 ```
-node index.js -p 项目路径 -i 0 
+node index.js -p 文件路径 -i 0 
 ```
 
 #### 学习
