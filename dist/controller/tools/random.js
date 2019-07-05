@@ -1,6 +1,6 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 // 随机数
+Object.defineProperty(exports, "__esModule", { value: true });
 class Random {
     constructor(lower, upper) {
         this.lower = lower;

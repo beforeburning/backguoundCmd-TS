@@ -21,7 +21,7 @@ export default class Generate {
             return new Promise(resolve => {
                 let vert = new Verticaltitles(item, this.path['verticaltitles']);
                 vert.start(() => {
-                    resolve()
+                    resolve();
                 });
             })
         });
