@@ -10,7 +10,7 @@ export default class CommanderReq {
     readdir: object;
 
     // txt数据 数组化
-    txtArr: string[];
+    private txtArr: string[];
 
     constructor(path: string, id: string) {
         this.path = path;

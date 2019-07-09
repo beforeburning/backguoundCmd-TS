@@ -5,7 +5,7 @@ import Cover from '../../model/gm/cover'
 export default class Generate {
     arr: string[];
     path: object;
-    random: number;
+    private random: number;
 
     constructor(arr: string[], path: object) {
         this.arr = arr;

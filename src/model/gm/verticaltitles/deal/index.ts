@@ -15,8 +15,8 @@ export default class Deal {
     constructor(titleOne: string, titleTwo: string, id: number, covers: string) {
         this.titleOne = titleOne;
         this.titleTwo = titleTwo;
-        this.id = id;
         this.coversPath = covers;
+        this.id = id;
     }
 
     // 单行

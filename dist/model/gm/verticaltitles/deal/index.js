@@ -9,8 +9,8 @@ class Deal {
         this.backPath = path_1.join(__dirname, `../../../../../static/background/verticalTitle.png`);
         this.titleOne = titleOne;
         this.titleTwo = titleTwo;
-        this.id = id;
         this.coversPath = covers;
+        this.id = id;
     }
     // 单行
     single(callback) {

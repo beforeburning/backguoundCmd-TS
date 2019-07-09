@@ -4,11 +4,11 @@ export default class verticaltitles {
     data: string;
     coversPath: string;
     // 词条id
-    id: number;
+    private id: number;
     // 标题1
-    titleOne: string = '';
+    private titleOne: string = '';
     // 标题2
-    titleTwo: string = '';
+    private titleTwo: string = '';
 
     constructor(data: string, coversPath: string) {
         this.data = data;

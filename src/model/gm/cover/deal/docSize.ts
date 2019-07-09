@@ -1,11 +1,11 @@
 import * as gm from 'gm';
 
 export default class DocSize {
-    left: number = 10;
-    docWidth: number;
-    docHeight: number;
-    headerWidth: number;
-    headerHeight: number;
+    private left: number = 10;
+    private docWidth: number;
+    private docHeight: number;
+    private headerWidth: number;
+    private headerHeight: number;
 
     docSize(photo: string, callback) {
         gm(photo).size((err, value) => {

@@ -1,4 +1,4 @@
-import ReadTxt from '../fileOperation/readTXT'
+import ReadTxt from '../fileOperation/readTXT';
 
 export default class DataProcessing extends ReadTxt {
     // 目录结构
@@ -17,7 +17,6 @@ export default class DataProcessing extends ReadTxt {
 
     cycle() {
         let txtPath: string = this.readdir['txt'];
-
         // 是否全量 暂时不需要这层判断
         // if (this.id !== '0') {
         //     this.segmentation = this.id.split(',');

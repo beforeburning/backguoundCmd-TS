@@ -6,17 +6,17 @@ export default class Cover {
     portraitPath: string;
     random: number;
     // 词条id
-    id: number;
+    private id: number;
     // 词条标题
-    title: string;
+    private title: string;
     // 医生名称
-    name: string;
+    private name: string;
     // 科室
-    dept: string;
+    private dept: string;
     // 医院
-    hospital: string;
+    private hospital: string;
     // 职称
-    position: string;
+    private position: string;
 
     constructor(data: string, coversPath: string, portraitPath: string, random: number) {
         this.data = data;

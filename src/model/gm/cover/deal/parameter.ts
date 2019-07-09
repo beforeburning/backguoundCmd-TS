@@ -3,30 +3,30 @@ import {join} from 'path';
 export default class parameter {
     // 参数
     // 封面图
-    backPath: string;
+    private backPath: string;
     // 封面图大小
     readonly coverWidth: number = 800;
     readonly coverHeight: number = 450;
     // 标题颜色
-    titleFontColor = '';
+    private titleFontColor = '';
     // 标题文字大小
-    titleFontSize: number;
+    private titleFontSize: number;
     // 标题 x轴
-    titleX: number;
+    private titleX: number;
     // 标题 y轴
-    titleY: number;
+    private titleY: number;
     // 名称文字大小
-    nameFontSize: number;
+    private nameFontSize: number;
     // name X轴
-    nameX: number;
+    private nameX: number;
     // name Y轴
-    nameY: number;
+    private nameY: number;
     // 科室文字大小
-    deptFontSize: number;
+    private deptFontSize: number;
     // doc偏移量
-    docOffset: number = 0;
+    private docOffset: number = 0;
     // 标题
-    titleSplic: string;
+    private titleSplic: string;
 
     parameter(title: string, random: number) {
         switch (random) {

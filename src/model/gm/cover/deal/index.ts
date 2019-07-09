@@ -16,16 +16,16 @@ export default class Synthetic {
     position: string;
 
     // 参数
-    docData: object;
-    parameterData: object;
+    private docData: object;
+    private parameterData: object;
 
     // 静态文件
     readonly fontPath: string = join(__dirname, `../../../../../static/font/SOURCEHANSANSCN-MEDIUM_0.OTF`);
     readonly fontPathTtile: string = join(__dirname, `../../../../../static/font/SOURCEHANSANSCN-BOLD.OTF`);
-    photo: string;
+    private photo: string;
 
     // 输出目录
-    resSrc: string;
+    private resSrc: string;
 
     constructor(random, coversPath, portraitPath, id, title, name, dept, hospital, position) {
         this.random = random;
