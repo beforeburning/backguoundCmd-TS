@@ -1,5 +1,4 @@
 // 随机数
-
 export default class Random implements RandomInterface {
     lower: number;
     upper: number;
