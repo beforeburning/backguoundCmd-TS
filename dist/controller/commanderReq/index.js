@@ -1,7 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const directory_1 = require("../../model/fileOperation/directory");
-const dataProcessing_1 = require("../../model/dataProcessing");
+const File_1 = require("../../common/File");
 const generate_1 = require("../generate");
 class CommanderReq {
     constructor(path, id) {
@@ -18,14 +17,11 @@ class CommanderReq {
             console.log('缺少参数: -i 指定词条 全量为0');
             return false;
         }
-        // directory获取目录结构
-        let dirFunc = new directory_1.default(this.path);
-        this.readdir = dirFunc.readdir();
-        // 获取数据
-        let dataCycle = new dataProcessing_1.default(this.readdir, this.id);
-        this.txtArr = dataCycle.cycle();
+        // 获取文件数据
+        let file = new File_1.default();
+        let fileObj = file.cycle(this.path);
         // 开始生成竖标题和封面图
-        let generate = new generate_1.default(this.txtArr, this.readdir);
+        let generate = new generate_1.default(fileObj['data'], fileObj['dir']);
         generate.output();
     }
 }

@@ -1,4 +1,4 @@
-interface RandomInterface {
+interface ToolInterface {
     lower: number;
     upper: number;
 

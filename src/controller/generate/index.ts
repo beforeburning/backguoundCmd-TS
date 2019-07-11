@@ -1,6 +1,6 @@
-import Random from '../tools/random';
-import Verticaltitles from '../../model/gm/verticaltitles'
-import Cover from '../../model/gm/cover'
+import Random from '../../common/tools/random';
+import Verticaltitles from '../gm/verticaltitles'
+import Cover from '../gm/cover'
 
 export default class Generate {
     arr: string[];
@@ -27,7 +27,9 @@ export default class Generate {
         });
 
         // 竖标题生成完毕
-        let vertPromise = Promise.all(vert);
+        Promise.all(vert).then(() => {
+            console.log('竖标题生成完毕');
+        });
 
         // 封面图
         let cover = this.arr.map(item => {
@@ -40,12 +42,9 @@ export default class Generate {
         });
 
         // 封面图生成完毕
-        let coverPromise = Promise.all(cover);
-
-        // over
-        Promise.all([vertPromise, coverPromise]).then(() => {
-            console.log('--- 生成结束 ---');
-        })
+        Promise.all(cover).then(() => {
+            console.log('封面图生成完毕');
+        });
 
     }
 }

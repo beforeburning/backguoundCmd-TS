@@ -10,5 +10,4 @@ program
 program.parse(process.argv);
 
 let app = new CommanderReq(program.path, program.id);
-
 app.start();

@@ -1,16 +1,9 @@
-import Directory from '../../model/fileOperation/directory';
-import DataProcessing from '../../model/dataProcessing';
+import File from '../../common/File';
 import Generate from '../generate';
 
 export default class CommanderReq {
     path: string;
     id: string;
-
-    // 目录结构
-    readdir: object;
-
-    // txt数据 数组化
-    private txtArr: string[];
 
     constructor(path: string, id: string) {
         this.path = path;
@@ -28,16 +21,12 @@ export default class CommanderReq {
             return false;
         }
 
-        // directory获取目录结构
-        let dirFunc = new Directory(this.path);
-        this.readdir = dirFunc.readdir();
-
-        // 获取数据
-        let dataCycle = new DataProcessing(this.readdir, this.id);
-        this.txtArr = dataCycle.cycle();
+        // 获取文件数据
+        let file = new File();
+        let fileObj = file.cycle(this.path);
 
         // 开始生成竖标题和封面图
-        let generate = new Generate(this.txtArr, this.readdir);
+        let generate = new Generate(fileObj['data'], fileObj['dir']);
         generate.output();
 
     }

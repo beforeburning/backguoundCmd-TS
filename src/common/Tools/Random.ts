@@ -1,5 +1,5 @@
 // 随机数
-export default class Random implements RandomInterface {
+export default class Random implements ToolInterface {
     lower: number;
     upper: number;
 
